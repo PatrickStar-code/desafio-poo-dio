@@ -3,6 +3,7 @@ package br.com.dio.desafio.dominio;
 public class Curso extends Conteudo{
 
     private int cargaHoraria;
+    private  Professor professor;
 
     @Override
     public double calcularXp() {
@@ -11,6 +12,15 @@ public class Curso extends Conteudo{
 
     public Curso() {
     }
+
+
+    public Professor getProfessor() {
+        return professor;
+    }
+
+    public void setProfessor(Professor professor) {
+        this.professor = professor;
+    }   
 
 
     public int getCargaHoraria() {
@@ -27,6 +37,8 @@ public class Curso extends Conteudo{
                 "titulo='" + getTitulo() + '\'' +
                 ", descricao='" + getDescricao() + '\'' +
                 ", cargaHoraria=" + cargaHoraria +
+                ", XP=" + calcularXp() +
+                ", professor=" + professor +
                 '}';
     }
 }
